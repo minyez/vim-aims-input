@@ -1,5 +1,18 @@
 # Vim extension for FHI-aims input files
 
+Filetype detection and syntax highlighting for [FHI-aims](https://fhi-aims.org/) input files.
+This is useful for quick check of invalid keywords.
+
+**N.B.**: the list of keywords is not complete.
+
+## Screenshots
+
+control file
+
+![control.in](figures/demo_control.png)
+
+![geometry.in](figures/demo_geometry.png)
+
 ## Prerequisites
 
 - Python 3

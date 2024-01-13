@@ -17,6 +17,10 @@ General:
     - calculate_fock_matrix_version
     - charge
     - charge_mix_param
+    - compensate_multipole_errors
+    - compute_analytical_stress
+    - compute_forces
+    - compute_heat_flux
     - default_initial_moment
     - default_prodbas_acc
     - distributed_spline_storage
@@ -66,6 +70,7 @@ General:
     - restart
     - restart_periodic_gw
     - restart_save_iterations
+    - ri_multipole_threshold
     - sc_accuracy_eev
     - sc_accuracy_etot
     - sc_accuracy_forces
@@ -83,6 +88,7 @@ General:
     - use_full_symmetry
     - use_local_index
     - use_logsbt
+    - use_pimd_wrapper
     - xc
 
 Output:

@@ -8,9 +8,9 @@ This is useful for quick check of invalid keywords.
 ## Screenshots
 
 control file
-
 ![control.in](figures/demo_control.png)
 
+geometry file
 ![geometry.in](figures/demo_geometry.png)
 
 ## Prerequisites

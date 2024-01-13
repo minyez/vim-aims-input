@@ -44,7 +44,7 @@ mkdir -p ~/.vim/after
 cd ~/.vim/after
 git clone https://github.com/minyez/vim-aims-input
 cd vim-aims-input
-python3 generate -d ..
+python3 generate.py -d ..
 ```
 
 NeoVim
@@ -53,5 +53,5 @@ mkdir -p ~/.config/nvim/after
 cd ~/.config/nvim/after
 git clone https://github.com/minyez/vim-aims-input
 cd vim-aims-input
-python3 generate -d ..
+python3 generate.py -d ..
 ```

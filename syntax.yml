@@ -3,6 +3,7 @@ Geometry:
   tags:
     - atom
     - atom_frac
+    - constrain_relaxation
     - lattice_vector
 
 General:
@@ -46,6 +47,7 @@ General:
     - packed_matrix_threshold
     - partition_acc
     - periodic_gw_modify_head_with_dielec_func
+    - periodic_gw_optimize
     - periodic_gw_optimize_init
     - periodic_gw_optimize_kgrid_symmetry
     - periodic_gw_optimize_lvl_init

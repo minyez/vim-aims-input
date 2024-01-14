@@ -83,7 +83,7 @@ def generate_syntax(tags_yaml, d, filetype: str, force: bool = False):
             if "extras" in config:
                 match_strs.extend(config["extras"])
             for s in match_strs:
-                p("syn match aims{}\t\"{}\"".format(name, s))
+                p("syn match aims{}\t\"^\\s*{}\"".format(name, s))
             if len(match_strs) > 0:
                 p("hi def link aims{}\t{}".format(name, group))
                 p()

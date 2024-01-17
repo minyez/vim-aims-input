@@ -23,6 +23,7 @@ General:
     - compute_forces
     - compute_heat_flux
     - contour_def_gw
+    - contour_eta
     - contour_zshot_offset
     - default_initial_moment
     - default_max_l_prodbas
@@ -36,6 +37,7 @@ General:
     - freq_grid_type
     - frequency_points
     - frozen_core_postscf
+    - full_cmplx_sigma
     - global_memory_tracking
     - gw_hedin_shift
     - gw_zshot

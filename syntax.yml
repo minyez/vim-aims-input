@@ -45,6 +45,7 @@ General:
     - hf_version
     - hse_unit
     - include_spin_orbit
+    - iterations_sc_cd
     - k_grid
     - k_offset
     - load_balancing
@@ -53,6 +54,8 @@ General:
     - mixer
     - n_anacon_par
     - n_max_pulay
+    - nocc_sc_cd
+    - nvirt_sc_cd
     - occupation_acc
     - occupation_type
     - output_level

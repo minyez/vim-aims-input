@@ -14,6 +14,8 @@ General:
     - anacon_type
     - auxil_basis
     - basis_threshold
+    - bs_unfolding
+    - bs_unfolding_output_state_ene
     - calculate_fock_matrix_version
     - calc_spectral_func
     - charge
@@ -102,11 +104,13 @@ General:
     - spin
     - state_lower_limit
     - state_upper_limit
+    - state_limits_ewin
     - symmetry_reduced_k_grid
     - total_energy_method
     - try_zshot
     - use_density_matrix
     - use_density_matrix_hf
+    - use_full_spectrum
     - use_full_symmetry
     - use_local_index
     - use_logsbt

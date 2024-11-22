@@ -92,12 +92,12 @@ def generate_syntax(tags_yaml, d, filetype: str, force: bool = False):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--syntax-yaml", type=str, default="syntax.yml",
-                   help="YAML file to configure Vim syntax")
+                   help="YAML file to configure Vim syntax, default: syntax.yml")
     p.add_argument("--ft", "--filetype", dest="filetype", type=str, default="aimsin",
                    help="Filetype for aims inputs in Vim, default: aimsin")
     p.add_argument("-d", dest="directory", type=str, default=".",
                    help="Vim configuration directory, default: pwd")
-    p.add_argument("-f", dest="force", action="store_true", default="aimsin",
+    p.add_argument("-f", dest="force", action="store_true",
                    help="Force overwrite")
     args = p.parse_args()
 

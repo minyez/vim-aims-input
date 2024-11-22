@@ -31,6 +31,7 @@ General:
     - default_max_l_prodbas
     - default_max_n_prodbas
     - default_prodbas_acc
+    - density_update_method
     - distributed_spline_storage
     - elsi_output_matrix
     - elsi_restart
@@ -40,6 +41,7 @@ General:
     - frequency_points
     - frozen_core_postscf
     - full_cmplx_sigma
+    - gamma_cut_coulomb
     - global_memory_tracking
     - gw_hedin_shift
     - gw_zshot
@@ -130,6 +132,7 @@ Output:
     - gw_regular_kgrid
     - h_s_matrices
     - k_eigenvalue
+    - k_point_list
     - matrices
     - memory_tracking
     - self_energy
@@ -151,6 +154,7 @@ Species:
     - include_min_basis
     - ion_occ
     - l_hartree
+    - logarithmic
     - mass
     - nucleus
     - outer_grid

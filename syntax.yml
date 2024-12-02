@@ -39,6 +39,7 @@ General:
     - exx_band_structure_version
     - freq_grid_type
     - frequency_points
+    - frozen_core
     - frozen_core_postscf
     - full_cmplx_sigma
     - gamma_cut_coulomb
@@ -48,10 +49,12 @@ General:
     - hartree_potential_version
     - hf_version
     - hse_unit
+    - hybrid_xc_coeff
     - include_spin_orbit
     - iterations_sc_cd
     - k_grid
     - k_offset
+    - lc_dielectric_constant
     - load_balancing
     - maximum_frequency
     - maximum_time
@@ -64,6 +67,7 @@ General:
     - occupation_type
     - output_level
     - override_illconditioning
+    - override_warning_loose_kgrid
     - packed_matrix_format
     - packed_matrix_threshold
     - partition_acc
@@ -74,6 +78,7 @@ General:
     - periodic_gw_optimize_lvl_init
     - periodic_gw_optimize_single_precision
     - periodic_gw_optimize_use_gpu
+    - plus_u_petukhov_mixing
     - pole_max
     - pole_min
     - postprocess_anyway
@@ -124,20 +129,44 @@ Output:
   prefix: "output\\s\\+"
   tags:
     - band
+    - band_during_scf
     - band_mulliken
     - basis
     - batch_statistics
+    - cc4s
+    - cube
+    - density
+    - dgrid
+    - dielectric
     - dos
+    - DFPT_phonon_band
+    - eigenstate_info
+    - fermisurface
     - grids
     - gw_regular_kgrid
     - h_s_matrices
+    - hessian
+    - hf_exchange_mat
     - k_eigenvalue
+    - k_eigenvalue_decompose
     - k_point_list
+    - ks_coulomb_integral
+    - librpa
     - matrices
+    - matrices_elsi
     - memory_tracking
+    - moment_mat_soc
+    - polarization
+    - postscf_eigenvalues
     - self_energy
+    - self_energy_matrix
+    - soc_eigenvalues
+    - species_proj_dos
+    - species_proj_dos_tetrahedron
     - v_eff
     - v_hartree
+    - vacuum_potential
+    - Z2_invariant
 
 Species:
   group: String

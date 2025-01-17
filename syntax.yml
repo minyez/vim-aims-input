@@ -24,6 +24,7 @@ General:
     - compute_analytical_stress
     - compute_forces
     - compute_heat_flux
+    - compute_kubo_greenwood
     - contour_def_gw
     - contour_eta
     - contour_zshot_offset
@@ -33,6 +34,7 @@ General:
     - default_prodbas_acc
     - density_update_method
     - distributed_spline_storage
+    - dos_kgrid_factors
     - elsi_output_matrix
     - elsi_restart
     - empty_states
@@ -54,6 +56,7 @@ General:
     - iterations_sc_cd
     - k_grid
     - k_offset
+    - kg_width
     - lc_dielectric_constant
     - load_balancing
     - maximum_frequency
@@ -71,6 +74,7 @@ General:
     - packed_matrix_format
     - packed_matrix_threshold
     - partition_acc
+    - periodic_gw_full_matrix
     - periodic_gw_modify_head_with_dielec_func
     - periodic_gw_optimize
     - periodic_gw_optimize_init
@@ -78,6 +82,7 @@ General:
     - periodic_gw_optimize_lvl_init
     - periodic_gw_optimize_single_precision
     - periodic_gw_optimize_use_gpu
+    - periodic_gw_self_energy_restart
     - plus_u_petukhov_mixing
     - pole_max
     - pole_min

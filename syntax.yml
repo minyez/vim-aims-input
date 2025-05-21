@@ -70,6 +70,7 @@ General:
     - occupation_type
     - output_level
     - override_illconditioning
+    - override_relativity
     - override_warning_loose_kgrid
     - packed_matrix_format
     - packed_matrix_threshold

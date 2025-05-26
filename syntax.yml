@@ -162,6 +162,7 @@ Output:
     - matrices_elsi
     - memory_tracking
     - moment_mat_soc
+    - nuclear_potential_matrix
     - polarization
     - postscf_eigenvalues
     - self_energy

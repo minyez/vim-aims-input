@@ -22,9 +22,12 @@ General:
     - charge_mix_param
     - compensate_multipole_errors
     - compute_analytical_stress
+    - compute_dipolematrix
+    - compute_dipolematrix_k_k
     - compute_forces
     - compute_heat_flux
     - compute_kubo_greenwood
+    - compute_momentummatrix
     - contour_def_gw
     - contour_eta
     - contour_zshot_offset
@@ -168,6 +171,7 @@ Output:
     - self_energy
     - self_energy_matrix
     - soc_eigenvalues
+    - soc_eigenvectors
     - species_proj_dos
     - species_proj_dos_tetrahedron
     - v_eff

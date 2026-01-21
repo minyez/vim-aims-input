@@ -5,6 +5,8 @@ Geometry:
     - atom_frac
     - constrain_relaxation
     - lattice_vector
+    - initial_charge
+    - initial_moment
 
 General:
   group: Identifier
@@ -61,6 +63,9 @@ General:
     - k_offset
     - kg_width
     - lc_dielectric_constant
+    - librpa_thres_chi0
+    - librpa_thres_nlex
+    - librpa_thres_sigc
     - load_balancing
     - maximum_frequency
     - maximum_time
@@ -87,6 +92,7 @@ General:
     - periodic_gw_optimize_single_precision
     - periodic_gw_optimize_use_gpu
     - periodic_gw_self_energy_restart
+    - periodic_hf
     - plus_u_petukhov_mixing
     - pole_max
     - pole_min
@@ -133,6 +139,21 @@ General:
     - use_pimd_wrapper
     - xc
 
+PeriodicHF:
+  group: Identifier
+  prefix: "periodic_hf\\s\\+"
+  tags:
+    - screening_threshold
+    - coulomb_threshold
+    - ovlp_mat_threshold
+
+MBPTBackend:
+  group: Identifier
+  prefix: "mbpt_backend\\s\\+"
+  tags:
+    - native
+    - librpa
+
 Output:
   group: Special
   prefix: "output\\s\\+"
@@ -148,6 +169,7 @@ Output:
     - dgrid
     - dielectric
     - dos
+    - dos_tetrahedron
     - DFPT_phonon_band
     - eigenstate_info
     - fermisurface

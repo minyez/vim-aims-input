@@ -15,7 +15,7 @@ def generate_ftdetect(d, filetype: str, force: bool = False):
         os.mkdir(dirname)
     fn = os.path.join(dirname, "{}.vim".format(filetype))
     if os.path.exists(fn) and not force:
-        print("{} exists. Use -f to overwrite".format(fn))
+        print("{} exists. Skip".format(fn))
         return
 
     with open(fn, 'w') as h:
@@ -36,7 +36,7 @@ def generate_ftplugin(d, filetype: str, force: bool = False):
         os.mkdir(dirname)
     fn = os.path.join(dirname, "{}.vim".format(filetype))
     if os.path.exists(fn) and not force:
-        print("{} exists. Use -f to overwrite".format(fn))
+        print("{} exists. Skip".format(fn))
         return
 
     with open(fn, 'w') as h:
@@ -46,21 +46,22 @@ setlocal comments=:#
 setlocal commentstring=#%s""".format(filetype=filetype), file=h)
 
 
-def generate_syntax(tags_yaml, d, filetype: str, force: bool = False):
+def generate_syntax(d, filetype: str, force: bool = False, *syntax_yamls):
     dirname = os.path.join(d, "syntax")
     if not os.path.isdir(dirname):
         os.mkdir(dirname)
     fn = os.path.join(dirname, "{}.vim".format(filetype))
     if os.path.exists(fn) and not force:
-        print("{} exists. Use -f to overwrite".format(fn))
+        print("{} exists. Skip".format(fn))
         return
 
     highlight_groups = {}
-    try:
-        with open(tags_yaml, 'r') as h:
-            highlight_groups = load(h, Loader=Loader)
-    except KeyError:
-        pass
+    for y in syntax_yamls:
+        try:
+            with open(y, 'r') as h:
+                highlight_groups.update(load(h, Loader=Loader))
+        except FileNotFoundError:
+            print(f"{y} not found, skip")
 
     with open(fn, 'w') as h:
         def p(*args):
@@ -91,8 +92,9 @@ def generate_syntax(tags_yaml, d, filetype: str, force: bool = False):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--syntax-yaml", type=str, default="syntax.yml",
-                   help="YAML file to configure Vim syntax, default: syntax.yml")
+    p.add_argument("-c", "--extra-configs", type=str,
+                   default=[], nargs="+",
+                   help="Additional YAML files to configure Vim syntax")
     p.add_argument("--ft", "--filetype", dest="filetype", type=str, default="aimsin",
                    help="Filetype for aims inputs in Vim, default: aimsin")
     p.add_argument("-d", dest="directory", type=str, default=".",
@@ -101,9 +103,6 @@ if __name__ == '__main__':
                    help="Force overwrite")
     args = p.parse_args()
 
-    if not os.path.exists(args.syntax_yaml):
-        raise FileNotFoundError("{} is not found".format(args.syntax_yaml))
-
     generate_ftdetect(args.directory, args.filetype, args.force)
     generate_ftplugin(args.directory, args.filetype, args.force)
-    generate_syntax(args.syntax_yaml, args.directory, args.filetype, args.force)
+    generate_syntax(args.directory, args.filetype, args.force, "syntax.yml", *(args.extra_configs))

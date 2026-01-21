@@ -1,2 +1,4 @@
 *.vim
 Makefile
+*.yml
+!syntax.yml
